@@ -5,23 +5,23 @@ public class UberApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please Sign In");
+        System.out.println("Please Sign In\n");
 
-        System.out.print("\nFirst Name: ");
+        System.out.print("First Name: ");
         String name = input.nextLine();
-        System.out.print("\nLast Name: ");
+        System.out.print("Last Name: ");
         String surname = input.nextLine();
-        System.out.print("\nEmail Address: ");
+        System.out.print("Email Address: ");
         String email = input.nextLine();
-        System.out.print("\nCellphone Number: ");
+        System.out.print("Cellphone Number: ");
         String cellnum = input.nextLine();
-        System.out.print("\nAmount to load on Account: ");
+        System.out.print("Amount to load on Account: ");
         int acc = input.nextInt();
 
         Passenger client = new Passenger(email,name,surname, cellnum, acc);
         
         input.nextLine();
-        System.out.println("\n\n******Welcome to Uber App******\n");
+        System.out.println("\n******Welcome to Uber App******\n");
         System.out.println("Please enter your Current location:");
         String startPoint = input.nextLine();
         System.out.println("Please enter your End location:");
@@ -37,6 +37,7 @@ public class UberApp {
         uberRide.assignDriver(type);
 
         System.out.println("\nCalculating cost...");
+        uberRide.calculateDistance();
         uberRide.calculateCost();
         
         System.out.println("\nFinding you a driver...");

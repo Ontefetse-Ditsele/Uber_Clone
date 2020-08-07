@@ -1,11 +1,11 @@
-import java.io.BufferedReader;
+//import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Iterator;
+//import java.io.InputStreamReader;
+//import java.net.HttpURLConnection;
+//import java.net.URL;
+//import java.util.Iterator;
 
-import com.google.gson.*;
+//import com.google.gson.*;
 /**
  * Abstract class
  * 
@@ -14,6 +14,8 @@ import com.google.gson.*;
 
  public abstract class Ride {
 
+    private static final String distance = "20540.00";
+    private static final double distance2 = 20540.00;
     //variables
     public final String startingPoint;
     protected final String endingPoint;
@@ -34,7 +36,7 @@ import com.google.gson.*;
    //Class Methods to assist all sub-ride Classes;
    
    protected static String retrieveDistanceAsString(final String jsonString) {
-      final GsonBuilder builder = new GsonBuilder();
+      /*final GsonBuilder builder = new GsonBuilder();
       builder.setPrettyPrinting();
       final Gson gson = builder.create();
       JsonObject jsonObject = gson.fromJson(jsonString, JsonObject.class); 
@@ -53,11 +55,11 @@ import com.google.gson.*;
            jsonObject = je.getAsJsonObject().get("distance").getAsJsonObject();
        }
   
-       return jsonObject.get("value")+"";
+       return jsonObject.get("value")+""; */return distance;
         }
 
    protected double getDistance(final String startingPoint, final String endingPoint) throws IOException {
-      final URL urlForGetRequest = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?origins="
+     /* final URL urlForGetRequest = new URL("https://maps.googleapis.com/maps/api/distancematrix/json?origins="
               + startingPoint + ",SA&destinations=" + endingPoint
               + ",SA&departure_time=now&key=AIzaSyCs2UIPeA_ygj6aDL45ta9ZdJu3Mo1PIOs");
       String readLine = null;
@@ -78,6 +80,6 @@ import com.google.gson.*;
       } else {
           System.out.println("GET NOT WORKED");
       }
-      return distance;
+      return distance;*/ return distance2;
   }
 }

@@ -5,7 +5,7 @@ import java.io.FileReader;
 public class Database {
 
     //Instance Variables
-    private final String path = " D: Uber_Clone/bin/drivers.csv";
+    private final String path = "../bin/drivers.csv";
     private int numberOfXL;
     private int numberOfX;
     private Driver[] drivers;
