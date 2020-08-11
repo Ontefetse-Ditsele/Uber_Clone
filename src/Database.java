@@ -24,7 +24,9 @@ public class Database {
         catch(Exception e) { System.out.println("Error: " + e.toString()); }
         return result;
     }
-
+    
+    //I can add other necessary functions for the class 
+    //and able to take in other class parameters.
     public void printArray(Driver[] drivers) {
         System.out.print("[ ");
         for(Driver d: drivers) {
@@ -77,14 +79,12 @@ public class Database {
                 Xdrivers[xindex] = this.drivers[i];
                 xindex++;
             }
-            if(this.drivers[i].getCar().getVehicleType().equals("XL")) {
+            else if(this.drivers[i].getCar().getVehicleType().equals("XL")) {
                 XLdrivers[xlindex] = this.drivers[i];
                 xlindex++;
             }
         }
-
         if(vehicleType.equals("X")) { return Xdrivers; }
-        return XLdrivers;
-        
+        return XLdrivers; 
     }
 }

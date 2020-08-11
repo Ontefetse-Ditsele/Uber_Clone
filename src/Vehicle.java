@@ -4,9 +4,11 @@
  * 05 August 2020
  */
 
+ //I understand how to use interfaces
 public interface Vehicle {
     
-    public String getNumberPlate();
     public String getColor();
     public String getModel();
+    public String getNumberPlate();
+ 
 }

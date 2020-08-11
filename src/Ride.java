@@ -12,12 +12,13 @@ import java.io.IOException;
  * To allow the extention of different types of Rides
  */
 
+ //I understand how abstract classes work.
  public abstract class Ride {
 
     private static final String distance = "20540.00";
     private static final double distance2 = 20540.00;
     //variables
-    public final String startingPoint;
+    protected final String startingPoint;
     protected final String endingPoint;
 
     public Ride(final String startingPoint, final String endingPoint) {

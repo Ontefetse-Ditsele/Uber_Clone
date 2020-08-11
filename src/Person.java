@@ -6,7 +6,7 @@
 */ 
 
 public class Person {
-
+    //I can create instance variables// 
     //Instance variables
     private String name;
     private String surname;
@@ -20,7 +20,7 @@ public class Person {
         this.phone_number = phone_number;
         this.cash = cash;
     }
-
+    //I understand how to use getters and setters
     // Methods : Setters
     public void setName(final String name) {
         this.name = name;
@@ -56,6 +56,6 @@ public class Person {
     }
 
     public String toString() {
-        return this.name + " " + this.surname;
+        return this.name + "  " + this.surname;
     }
 }

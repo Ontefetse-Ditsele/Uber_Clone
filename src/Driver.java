@@ -11,7 +11,11 @@ public class Driver extends Person {
     Car car;
     String licenseID;
     
-    //constructor
+    /**constructor
+     *
+     * I am able to use another class type variable in another class.
+     * I have  the ability to add one class object to other new class.
+     */
     Driver(final Car car, final String licenseID, final String name, final String surname, final String phone_number,
             final int cash) {
         super(name, surname, phone_number, cash);

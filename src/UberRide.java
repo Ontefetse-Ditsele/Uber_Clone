@@ -50,7 +50,7 @@ public class UberRide extends Ride {
         System.out.println(
                 "Deducting R" + (int) this.price + " from passenger account. Account bal: R" + passenger.getCash());
     }
-
+    
     public void calculateDistance(){
 
         try {
@@ -64,8 +64,7 @@ public class UberRide extends Ride {
     }
 
     public void calculateCost(){
-        double cost = 0.0;        cost = this.distance * this.driver.getCar().getBaseRate();
-        this.price = cost;
+        this.price = this.distance * this.driver.getCar().getBaseRate();
         System.out.println("The cost is: R" + (int) this.price);
     
     }

@@ -4,8 +4,10 @@
  * 05 August 2020
  **/
 
+ //I understand Polymorphism & I know how to use it
 public class Car implements Vehicle {
-
+ // { I understand how encapsulaton works how interface work.}
+    
     //Instance variables
     private final String numberPlate;
     private final String color;

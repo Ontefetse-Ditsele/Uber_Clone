@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class UberApp {
 
@@ -18,6 +18,7 @@ public class UberApp {
         System.out.print("Amount to load on Account: ");
         int acc = input.nextInt();
 
+        //I have the ability to call created objects
         Passenger client = new Passenger(email,name,surname, cellnum, acc);
         
         input.nextLine();
@@ -29,11 +30,12 @@ public class UberApp {
 
         UberRide uberRide = new UberRide(startPoint, endPoint, client);
         
+
+        //I have the ability to use System.out.println() to debug
         System.out.println("Please enter your Uber Prefference: ");
         String type = input.nextLine();
         
         input.close();
-        
         uberRide.assignDriver(type);
 
         System.out.println("\nCalculating cost...");
